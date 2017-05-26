@@ -1,0 +1,48 @@
+Drag and Drop for Images
+
+https://www.twilio.com/blog/2015/12/getting-started-with-electron-building-a-desktop-chat-app.html
+
+
+
+success:function(data){
+    		log('success')
+    		logd(data)
+            user.email=data.email
+            user.userName = data.first_name+data.last_name
+            user.pass =''
+            user.loggedIn= true
+            log('-----------------------user----------------')
+            logd(user)
+
+            app.load('./pages/dashboard.html #content', 
+                function(){
+                    user.loggedIn=true;
+                    ipcRenderer.send('sesRequest', user);
+                    //XMPP(user.userName, user.pass);
+                    ipcRenderer.send('dashWinDim', user);
+                //$('#userName').append(user.userName)
+                
+
+            })
+
+    	},
+    	error:function (jqXHR, exception) {
+                    var msg = '';
+                    if (jqXHR.status === 0) {
+                        msg = 'Not connect.\n Verify Network.';
+                    } else if (jqXHR.status == 404) {
+                        msg = 'Requested page not found. [404]';
+                    } else if (jqXHR.status == 500) {
+                        msg = 'Internal Server Error [500].';
+                    } else if (exception === 'parsererror') {
+                        msg = 'Requested JSON parse failed.';
+                    } else if (exception === 'timeout') {
+                        msg = 'Time out error.';
+                    } else if (exception === 'abort') {
+                        msg = 'Ajax request aborted.';
+                    } else {
+                        msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                    }
+                   log(msg) //alert('Error Message')
+            }
+    })

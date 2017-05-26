@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dubtel Messanger</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="./js/global.js"></script>
+    <script src="./js/Register.js"></script>
+    <script src="./node_modules/strophe/strophe.js"></script>   
+    <script src="./js/xmpp.js"></script> 
+    <script src="./js/modal.js"></script> 
+    <!--<script src="./node_modules/jquery/dist/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      </head>
+ 
+  <body>
+  <script>
+  const ipcRenderer  = require('electron').ipcRenderer
+    ipcRenderer.send('sesCheck', '')
+    ipcRenderer.on('sesCheckTest', (event, arg) =>{
+      login(arg)
+    })
+    ipcRenderer.on('user', (event, arg) =>{
+      console.log("User logged in through Index: ")
+      console.dir(arg)
+      user = arg;
+    })
+
+  </script>
+    <div class="app-container" id="app">
+      <div id="content">
+        <div class="header cw">
+          <img src="img/DubTel_Logo.png" width="300px" height="auto">
+        </div>
+
+        <div class="login-w">
+          <h1>Login</h1>
+          <!--<h6>Don't have an account? <a href="./Register.html">Sign Up now!</a></h6>-->
+
+          <form id="login_form" >
+            <input type="text" name="username" placeholder="Email" id="username" autofocus><br>
+            <input type="password" name="password" placeholder="Password" id="password"><br>
+            <div class="login-submit">
+              <div class="login-btns">
+                <button type="button" class ="light" id="Create_Account" onclick="navToRegister()">Create Account</button>
+                <!--<span class="light" id="Create_Account" onclick="navToRegister();">Create Account</span>-->
+                <input type="submit" value="Login" class="dark" data-target="#login_response" id="login-submit" >
+              </div>
+              <!--<div class="kmsi">
+                <input type="checkbox" name="kmsi">Keep me signed in
+              </div>-->
+            </div>
+          </form>
+          </div>
+        
+
+        <div class="cw">
+            <h6>2017 Admin Dashboard</h6>
+            <!-- Modal -->
+            <div class="modal dark" id="response" role="dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="i-flex")>
+                    <h4 id="modal-notif"></h4>
+                    <button type="button" class="close" id="notif-close">&times;</button>
+                  </div>
+
+                </div>                
+              </div> 
+          </div>
+      </div>
+    </div>
+
+  </div>
+          
+
+  </body>
+  <script src="./js/global.js"></script>
+  
+</html>

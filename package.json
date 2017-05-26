@@ -1,0 +1,21 @@
+{
+  "name": "dubtel-messanger-2",
+  "version": "1.0.0",
+  "description": "Code needs to be redone.",
+  "main": "main.js",
+  "scripts": {
+    "test": "start",
+    "start": "electron ."
+  },
+  "keywords": [
+    "electron",
+    "messanger",
+    "git"
+  ],
+  "author": "Tiko Nelson <tiko.nelson@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.6.8",
+    "strophe": "^1.2.4"
+  }
+}

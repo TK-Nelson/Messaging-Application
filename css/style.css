@@ -1,0 +1,373 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+header {
+	width: 100%;
+	height: auto;
+}
+
+.header{
+	min-height:61px;
+	-webkit-app-region: drag;
+}
+
+h1, h6{
+	margin:5% auto;
+}
+
+h6{
+	font-size:14px;
+	font-weight:100;
+	color:#adadad;
+	margin: 5% 0;
+}
+
+header h1 {
+	font-size: 60px;
+	font-weight: 100;
+	padding: 0;
+}
+
+footer{
+	position:relative;
+	bottom:0;
+	margin: 0 auto;
+	left:0;
+	right:0;
+}
+
+.app-container{
+	background-color:#ddd;
+	height: 100vh;
+	/*padding:10px;*/
+	overflow:hidden;
+}
+
+.login-w{
+	margin:auto 10px;
+	background:#fff;
+	padding:20px;
+	border-radius:3px;
+	overflow:hidden;
+}
+
+input[type=text],
+input[type=password]{
+	width:100%;
+	border-radius:3px;
+	color:#adadad;
+	background-color:#eee;
+	margin-bottom:15px;
+	text-indent:10px;
+	border:0px solid #565656;
+	line-height: 2em;
+}
+
+#message-box{
+	padding:10px 0;
+	margin:0;
+}
+
+
+input[type=checkbox]{
+	margin-left:10px;
+
+}
+.login-btns a{
+	text-decoration:none;
+	color: #adadad;
+}
+
+.login-btns span,
+.login-btns input,
+.login-btns button{
+	line-height:1.5em;
+	margin-left:10px;
+	border-radius:3px;
+	padding:5px 10px;
+	text-decoration:none;
+	vertical-align: middle;
+	font: 13.3333px Arial;
+	border: 1px solid #565656;
+}
+
+.login-btns{
+	margin-bottom:20px;
+}
+	
+
+.dark{
+	background-color:#565656;
+	color:#fff;
+}
+
+.light{
+	background-color:#fff;
+	color: #565656;
+	cursor:pointer;
+}
+
+.kmsi{
+	float:right;
+	display:flex;
+}
+
+.login-submit{
+	float:right;
+}
+
+
+.cw{
+	text-align:center;
+}
+
+.modal{
+	position:fixed;
+	left:0;
+	right:0;
+	bottom:0;
+	transition:height .8s ease-in-out;
+	height:0px;
+	text-align: center;
+	width:100%;
+}
+
+.modal  button{
+	height: inherit;
+	float: right;
+
+}
+
+.modal-content{
+	height:100%;
+}
+
+.i-flex{
+	display:inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width:100%;
+	height:100%;
+}
+
+.dash{
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+.msg{
+	display:block;
+	word-break:break-all;
+}
+
+.message-container{
+	flex-grow:1;
+	display: flex;
+	flex-direction: column;
+	height:100%;
+
+}
+
+.channel-header{
+	border-bottom: 1px solid black;
+	display:inline-flex;
+	align-items:center;
+}
+
+.channel-header h3{
+	margin:0;
+	padding:.75em;
+	flex-grow:1;
+}
+#windowed{
+	margin-right:10px;
+	align-items:;
+}
+
+#windowed > button{
+	border:none;
+	text-align:center;
+	padding:0 7px;
+	-webkit-app-region: no-drag;
+}
+#windowed > button:hover{
+	background-color:none;
+	color:#cccccc;
+	border:none;
+	text-align:center;
+}
+
+.chat-log{
+	background-color:white;
+	flex-grow:1;
+	padding-left:1em;
+	word-wrap:break-word;
+	height: calc(100% - 107px);
+	overflow-y:scroll;
+
+}
+
+#chat{
+	display:flex;
+}
+
+
+/**Flyout Navigation**/
+
+	ul {
+		list-style-type: none;
+		margin:0;
+		background-color: #f1f1f1;
+		height:100%;
+		flex-grow:1;
+	}
+
+	.flyout{
+		float:left;
+		transition: width .8s ease-in-out;
+		z-index:999999;
+		height:100%;
+		display:flex;
+		flex-direction: column;
+		background-color: #9B9B9B;
+	}
+
+	.flyout button,
+	 #group-dropdown{
+		background-color:#363434;
+		color:white;
+		min-width:200px;
+		border:none;
+	}
+
+	.c-flex{
+		display:flex;
+		flex-direction: column;
+	}
+
+
+
+	.dropdown-menu{
+		position:inherit !important;
+		float:none !important;
+		margin:0 !important;
+		border-radius:0 !important;
+		background-color:#999999 !important;
+		padding:0 !important;
+		
+	}
+
+	.open .dropdownmenu{
+		padding:0;
+	}
+	.dropdown-menu>li{
+		background-color:#9b9b9b;
+	}
+
+
+	.dropdown-menu>li>button:hover{
+		background-color:#777;
+	}
+
+/**Flyout Individual Buttons **/
+		#addFriend:hover{
+			background-color:#d81921 ;
+		}
+		#addFriend{
+			cursor:pointer;
+			padding-left:1em;
+		}
+		#addFriend, #chat{
+			line-height:1.6em;
+			flex-basis:46px;
+		}
+
+		#Friends{
+			padding:0;
+		}
+
+
+		.dropdown-toggle span{
+			margin: auto 10px;
+		}
+
+		.dropdown-toggle {
+			display:inline-flex;
+			text-align:left;
+
+		}
+
+		.dropdown-toggle h4{
+			padding-right:;
+			margin:none;
+			font-weight: 600px
+		}
+
+		.account{
+			padding:6px 1px;
+			color:white;
+			display:flex;
+			align-items: center;
+		}
+
+		#login-status{
+			background-color:green;
+			height:6px;
+			width:6px;
+			margin:auto 10px auto 20px;
+			float: left
+		}
+/**End Flyout Buttons**/
+/**End Flyout Navicatio**/ 
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.tooltip .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dubtel</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/flyout.css" rel="stylesheet">
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="./javascripts/global.js"></script>
+    <script src="./javascripts/Register.js"></script>
+    <script src="./node_modules/strophe/strophe.js"></script>   
+    <script src="./javascripts/xmpp.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="app-container" id="app">
+    <!--Content  -->
+    <div id="content" class="dash">
+      <!-- Flyout  -->
+      <div class="flyout" id="flyout">
+
+          <div id="group-dropdown" role="navigation" class="header c-flex">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="tooltiptext" id="DashPopup" onclick="tooltip()"></span>
+              <span class="caret"></span>
+             <h4>Dubtel</h4>
+            </button>
+            <ul id="group-menu" class="dropdown-menu">
+              <li> <button id="settings">Settngs </button> </li>
+              <li> <button id="log-out">Log Out </button> </li>
+            </ul>
+            <div class="account">
+              <div id="login-status" />
+              <span id="userName"/>
+            </div>
+          </div>
+
+
+
+          <div id="channel-dropdown" role="navigation" class="c-flex">
+            <button class=" dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="caret"></span>
+              Channels
+            </button>
+            <ul id="channels-menu" class="dropdown-menu">
+              <li><a href="#">General</a></li>
+            </ul>
+          </div>
+        
+
+          <div id="friends-dropdown" role="navigation" class="c-flex">
+            <button class=" dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="caret"></span>
+              Friends
+            </button>
+            <ul id="friends-menu" class="dropdown-menu">
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">JavaScript</a></li>
+            </ul>
+          </div>
+        </div>
+
+      
+      <div class="message-container" id="message-container">
+        <div class="header to" id="to">
+          <h3>Dashboard</h3>
+        </div>
+        <div class="chat-log" id="chat-log"> 
+      </div>
+      <form id="chat">
+        <input type="text" name="text" placeholder="Enter Text Here" id="message-box" autofocus>
+        <input type="button" id="send" value="Send" onclick="sendMessage()">
+      </form>
+
+    </div>
+    </div>
+
+    </div>
+
+    <script>function tooltip(this){
+      if
+      var tooltip = document.getElementById("DashPopup")
+      tooltip.classList.toggle("show")
+    } 
+    </script>
+  </body>
+  <script src="./javascripts/global.js"></script>
+  
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dubtel</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./javascripts/Register.js"></script>
+  <body
+    </head>
+    <div class="container" id="app">
+        <div id="content">
+
+          <div class="header">
+            <img src="img/DubTel_Logo.png" width="300px" height="auto">
+          </div>
+          <div class="login-w">
+            <h1>Register</h1>
+            <form id="Register" method='POST'>
+              <input type="text" name="first_name" placeholder="First Name" id="first_name" required><br>
+              <input type="text" name="last_name" placeholder="Last Name" id="last_name" required><br>
+              <input type="text" name="email" placeholder="Email" id="email" required><br>
+              <input type="text" name="password" placeholder="Password" id="password" required><br>
+              <input type="text" name="phone" id="phone" placeholder="Phone Number" required><br>
+              <input type="text" name="businessname" id="businessname" placeholder="Business Name" required><br>
+              <div class="login-submit">
+                <div class="login-btns">
+                  <input type="button" value="Register" class="dark" onclick="Register();">
+                  <span class="light" id="Cancel" onclick="navLogin();">Cancel</span>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="cw">
+            <h6>2017 Admin Dashboard</h6>
+          </div>
+
+        </div>
+    </div>
+  </body>
+</html>
